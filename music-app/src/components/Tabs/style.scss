@@ -1,0 +1,52 @@
+.tabs-container {
+  .tab-header {
+    a {
+      flex: 1;
+      display: inline-block;
+      padding: 10px 0;
+      text-align: center;
+
+      text-decoration: none;
+      color: #fff;
+      font-size: 16px;
+      border-bottom: 1px solid gray;
+
+      &:active {
+        border-bottom: 1px solid #801fc5;
+      }
+    }
+  }
+
+  .tab-contents {
+    .tab-content {
+      display: none;
+      &:target {
+        display: block;
+      }
+      .content-wrapper {
+          margin-top: 20px;
+          flex-wrap: wrap;
+        .content-item {
+          width: 120px;
+          height: 120px;
+          background: grey;
+          border-radius: 25%;
+          margin-bottom: 20px;
+          img{
+            width: 100%;
+            height: 100%;
+            border-radius: 25%;
+            object-fit: cover;
+            object-position: center;
+          }
+          p{
+            text-align: center;
+          }
+        }
+      }
+    }
+    .active{
+      display: block;
+    }
+  }
+}
